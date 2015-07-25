@@ -33,13 +33,13 @@ Initialize a new virtual element.  Listen to the `render` event. Expects a
 accepts
 [`virtual-dom` SVG elements](https://github.com/substack/virtual-hyperscript-svg).
 
-### el([data])
+### el([state])
 Render the element's vdom tree to DOM nodes which can be mounted on the DOM.
 Uses [main-loop](https://github.com/Raynos/main-loop) under the hood. Calling
-the method again will re-render the DOM nodes with the new data. Alias:
-`el.render([data])`.
+the method again will re-render the DOM nodes with the new state. Alias:
+`el.render([state])`.
 
-### el.toString([data])
+### el.toString([state])
 Render the element's vdom tree to a string. For example useful to pre-render
 HTML on the server, or save to a static file.
 
@@ -49,10 +49,10 @@ Using `virtual-dom` requires quite some boilerplate. `vel` removes the need for
 that boilerplate without adding extra features, making it easier to write
 `virtual-dom` systems.
 
-### why is there no data transport mechanism included?
-`vel` does one thing, and only one thing. Instead of including a data transport
+### why is there no state transport mechanism included?
+`vel` does one thing, and only one thing. Instead of including a state transport
 mechanism I felt it made more sense to let users decide for themselves how they
-want their data to flow between components.
+want their state to flow between components.
 
 ### what's the difference between virtual-dom and react?
 `react` is an opinionated framework that uses non-standard syntax to create

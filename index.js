@@ -26,10 +26,10 @@ function vel (rend) {
   // render the element's vdom tree to DOM nodes
   // which can be mounted on the DOM
   // any? -> DOMNode
-  function render (data) {
-    if (update) return update(data)
+  function render (state) {
+    if (update) return update(state)
 
-    const loop = mainLoop(data, renderFn(rend), {
+    const loop = mainLoop(state, renderFn(rend), {
       create: create,
       diff: diff,
       patch: patch
@@ -42,15 +42,15 @@ function vel (rend) {
 
   // render the element's vdom tree to a string
   // any? -> str
-  function toString (data) {
-    return toHtml(renderFn(rend)(data))
+  function toString (state) {
+    return toHtml(renderFn(rend)(state))
   }
 }
 
 // render function
 // (fn, fn) -> fn(any?) -> obj
 function renderFn (rend) {
-  return function (data) {
-    return rend(h, data)
+  return function (state) {
+    return rend(h, state)
   }
 }

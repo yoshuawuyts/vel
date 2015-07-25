@@ -1,8 +1,8 @@
 const vel = require('vel')
 
-const el = vel((h, data) => {
+const el = vel((h, state) => {
   return h.html(`
-    <p>Hello my name is ${data.name}</p>
+    <p>Hello my name is ${state.name}</p>
   `)
 })
 
