@@ -1,15 +1,11 @@
-const create = require('virtual-dom/create-element')
-const svg = require('virtual-hyperscript-svg')
-const patch = require('virtual-dom/patch')
-const diff = require('virtual-dom/diff')
 const toHtml = require('vdom-to-html')
 const mainLoop = require('main-loop')
-const html = require('virtual-html')
+const vdom = require('virtual-dom')
 const h = require('virtual-dom/h')
 const assert = require('assert')
 
-h.html = html
-h.svg = svg
+h.svg = require('virtual-hyperscript-svg')
+h.html = require('virtual-html')
 
 module.exports = vel
 
@@ -28,15 +24,8 @@ function vel (rend) {
   // any? -> DOMNode
   function render (state) {
     if (update) return update(state)
-
-    const loop = mainLoop(state, renderFn(rend), {
-      create: create,
-      diff: diff,
-      patch: patch
-    })
-
+    const loop = mainLoop(state, renderFn(rend), vdom)
     update = loop.update
-
     return loop.target
   }
 
