@@ -1,6 +1,6 @@
 {
   "name": "vel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create and render virtual-dom elements with ease",
   "main": "index.js",
   "scripts": {
