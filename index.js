@@ -17,6 +17,7 @@ function vel (rend) {
   var update = null
   render.toString = toString
   render.render = render
+  render.vtree = vtree
   return render
 
   // render the element's vdom tree to DOM nodes
@@ -33,6 +34,12 @@ function vel (rend) {
   // any? -> str
   function toString (state) {
     return toHtml(renderFn(rend)(state))
+  }
+
+  // Get the element's vdom tree.
+  // any? -> obj
+  function vtree (state) {
+    return rend(h, state)
   }
 }
 

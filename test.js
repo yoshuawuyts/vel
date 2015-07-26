@@ -88,3 +88,13 @@ test('calling el.toString() renders to string', function (t) {
   const str = el.toString('cruel')
   t.equal(str, '<div>hello cruel world</div>')
 })
+
+test('el.vtree() returns the vdom tree', function (t) {
+  t.plan(2)
+  const el = vel(function (h, state) {
+    return h('div', 'hello ' + state + ' world')
+  })
+  const vtree = el.vtree('cruel')
+  t.equal(typeof vtree, 'object')
+  t.equal(vtree.tagName, 'DIV')
+})

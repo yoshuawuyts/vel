@@ -43,6 +43,9 @@ the method again will re-render the DOM nodes with the new state. Alias:
 Render the element's vdom tree to a string. For example useful to pre-render
 HTML on the server, or save to a static file.
 
+### vtree = el.vtree([data])
+Get the element's vdom tree. Useful for element composition.
+
 ## FAQ
 ### why did you write this?
 Using `virtual-dom` requires quite some boilerplate. `vel` removes the need for
