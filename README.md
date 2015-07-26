@@ -85,7 +85,7 @@ inheritance is your thing, definitely check out
 [npm-url]: https://npmjs.org/package/vel
 [travis-image]: https://img.shields.io/travis/yoshuawuyts/vel/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/yoshuawuyts/vel
-[codecov-image]: https://img.shields.io/codecov/c/yoshuawuyts/vel/master.svg?style=flat-square
+[codecov-image]: https://img.shields.io/codecov/c/github/yoshuawuyts/vel/master.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/yoshuawuyts/vel
 [downloads-image]: http://img.shields.io/npm/dm/vel.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/vel
