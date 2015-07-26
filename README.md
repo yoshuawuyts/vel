@@ -1,7 +1,7 @@
 # vel
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+[![Test coverage][codecov-image]][codecov-url]
 [![Downloads][downloads-image]][downloads-url]
 [![js-standard-style][standard-image]][standard-url]
 
@@ -82,8 +82,8 @@ inheritance is your thing, definitely check out
 [npm-url]: https://npmjs.org/package/vel
 [travis-image]: https://img.shields.io/travis/yoshuawuyts/vel/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/yoshuawuyts/vel
-[coveralls-image]: https://img.shields.io/coveralls/yoshuawuyts/vel.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/yoshuawuyts/vel?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/yoshuawuyts/vel/master.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/yoshuawuyts/vel
 [downloads-image]: http://img.shields.io/npm/dm/vel.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/vel
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
