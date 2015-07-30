@@ -29,7 +29,7 @@ document.body.appendChild(node)
 Initialize a new virtual element.  Listen to the `render` event. Expects a
 `vdom` tree to be returned. `h` accepts [`virtual-dom` elements](https://github.com/Matt-Esch/virtual-dom),
 `h.html` accepts 
-[HTML strings](https://github.com/substack/virtual-hyperscript-svg) and `h.svg`
+[HTML strings](https://github.com/azer/virtual-html) and `h.svg`
 accepts
 [`virtual-dom` SVG elements](https://github.com/substack/virtual-hyperscript-svg).
 
