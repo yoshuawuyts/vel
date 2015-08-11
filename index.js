@@ -7,6 +7,10 @@ const assert = require('assert')
 h.svg = require('virtual-hyperscript-svg')
 h.html = require('virtual-html')
 
+// required for event delegation
+// to be handled correctly
+require('dom-delegator')()
+
 module.exports = vel
 
 // initialize a new virtual element
