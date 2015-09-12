@@ -6,6 +6,7 @@ const assert = require('assert')
 
 h.svg = require('virtual-hyperscript-svg')
 h.html = require('virtual-html')
+h.jsx = jsx
 
 // required for event delegation
 // to be handled correctly
@@ -45,6 +46,16 @@ function vel (rend) {
   function vtree (state) {
     return rend(h, state)
   }
+}
+
+function jsx () {
+  var args = Array.prototype.slice.call(arguments)
+
+  if (args[2] && !Array.isArray(args[2])) {
+    args[2] = args.splice(2)
+  }
+
+  return h.apply(this, args)
 }
 
 // render function

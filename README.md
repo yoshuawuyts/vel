@@ -28,7 +28,7 @@ document.body.appendChild(node)
 ### el = vel(cb(h, state))
 Initialize a new virtual element.  Listen to the `render` event. Expects a
 `vdom` tree to be returned. `h` accepts [`virtual-dom` elements](https://github.com/Matt-Esch/virtual-dom),
-`h.html` accepts 
+`h.html` accepts
 [HTML strings](https://github.com/azer/virtual-html) and `h.svg`
 accepts
 [`virtual-dom` SVG elements](https://github.com/substack/virtual-hyperscript-svg).
@@ -62,6 +62,18 @@ want their state to flow between components.
 systems. It forces users to write JS in OO style and is hard to switch from
 once you buy into it. `virtual-dom` does away with those opinions, giving users
 a blazingly fast rendering engine without the overhead of a framework.
+
+### can I still use jsx with vel?
+If you wish, yes. Two things you need to ensure:
+
+* When configuring babel, set the `jsxPragma` option to `'h.jsx'`.
+* Always name your render function's first argument `h`.
+
+After that, the following is possible:
+
+``` js
+const el = vel(h => <div>Hello World!</div>)
+```
 
 ### this module sound lot like base-element!
 Yeah, definitely! I'm actually a huge fan of
